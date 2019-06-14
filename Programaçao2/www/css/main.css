@@ -1,0 +1,13 @@
+body{
+	background: white;
+	font-family: sans-serif;
+}
+header h1{
+	color: #e74c3c;
+}
+.secum{
+	display: flex;
+}
+.um{
+	background-color: #2c3e50;
+}
