@@ -43,8 +43,6 @@ body{
 .secdois h1{
 	color: #3B8686;
 }
-.sectres{
-}
 .prin li{
 	width: 25vw;
 	height: 10vh;
@@ -120,4 +118,7 @@ button{
 	margin: 5vh 10vw;
 	width: 80vw;
 	height: 15vh;
+}
+.win{
+	display: none;
 }

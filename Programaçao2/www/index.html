@@ -59,13 +59,17 @@
     </div>
     <button type="button" name="button">Iniciar</button>
   </section>
+  <section class="win">
+      <h1>PARABENS!!!!!</h1>
+  </section>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
   $(".inic button").on("click", function(){
     $(".inic").fadeOut();
     $(".prin").fadeIn();
     var temp = parseInt(3);
-    var ran = Math.floor(Math.random() * 100) + 1;
+    var ran = 36;
+    // Math.floor(Math.random() * 100) + 1;
 
     $(".prin .secdois h1").text(temp);
     $(".prin .secum .um h1").text(ran);
@@ -88,6 +92,9 @@
       }else{
         var res = parseInt($(".dois").text()) + parseInt(ta);
         $(".dois").text(res);
+         if(ran == res){
+          $(".prin").fadeOut();
+          }
       }
     });
      $(".sub").on("click", function(){
@@ -99,13 +106,12 @@
       }else{
         var res = parseInt($(".dois").text()) - parseInt(ta);
         $(".dois").text(res);
+         if(ran == res){
+          $(".prin").fadeOut();
+     }
+
       }
     });
-     // if($(".prin .secum .um h1").text() == $(".dois").text()){
-     //  $(".prin").fadeOut();
-     //  $("")
-     // }
-
   });
 </script>
 </body>
