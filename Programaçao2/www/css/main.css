@@ -118,7 +118,17 @@ button{
 	margin: 5vh 10vw;
 	width: 80vw;
 	height: 15vh;
+	background: #79BD9A;
+	border: none;
+	border-radius: 5px;
+	color: #0B486B;
+	font-size: 2em;
 }
 .win{
 	display: none;
+}
+.win h1{
+	text-align: center;
+	line-height: 50vh;
+	color: #0B486B;
 }
