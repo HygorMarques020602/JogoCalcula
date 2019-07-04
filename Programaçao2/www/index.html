@@ -34,7 +34,7 @@
           <li class="sub">78</li>
           <li class="som">7</li>
           <li class="som">61</li>
-          <li class="sub">27</li>
+          <li class="sub">64</li>
           <li class="sub">9</li>
           <li class="som">52</li>
           <li class="som">43</li>
@@ -89,12 +89,21 @@
       var num2 = $(".dois").text();
       if($(".dois").text() == 0){
         $(".dois").text(ta);
+        var met = $(".prin .secum .um h1").text();
+        var reu = $(".dois").text();
+        if(met == reu){
+          $(".prin").fadeOut();
+          $(".win").fadeIn();
+        }
       }else{
         var res = parseInt($(".dois").text()) + parseInt(ta);
         $(".dois").text(res);
-         if(ran == res){
+        var met = $(".prin .secum .um h1").text();
+        var reu = $(".dois").text();
+        if(met == reu){
           $(".prin").fadeOut();
-          }
+          $(".win").fadeIn();
+        }
       }
     });
      $(".sub").on("click", function(){
@@ -103,14 +112,22 @@
       if($(".dois").text() == 0){
         var neg = ta * -1;
         $(".dois").text(neg);
+        var met = $(".prin .secum .um h1").text();
+        var reu = $(".dois").text();
+        if(met == reu){
+          $(".prin").fadeOut();
+          $(".win").fadeIn();
+        }
       }else{
         var res = parseInt($(".dois").text()) - parseInt(ta);
         $(".dois").text(res);
-         if(ran == res){
+        var met = $(".prin .secum .um h1").text();
+        var reu = $(".dois").text();
+        if(met == reu){
           $(".prin").fadeOut();
+          $(".win").fadeIn();
+        }
      }
-
-      }
     });
   });
 </script>
