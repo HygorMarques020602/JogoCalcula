@@ -24,7 +24,7 @@
       </div>
     </section>
     <section class="secdois">
-      <h1>10</h1>
+      <h1>3</h1>
     </section>
     <section class="sectres">
         <ul>
@@ -36,14 +36,14 @@
           <li class="som">61</li>
           <li class="sub">27</li>
           <li class="sub">9</li>
-          <li class="div">52</li>
-          <li class="div">43</li>
-          <li class="mult">95</li>
-          <li class="mult">36</li>
-          <li class="div">19</li>
-          <li class="div">85</li>
-          <li class="mult">27</li>
-          <li class="mult">48</li>
+          <li class="som">52</li>
+          <li class="som">43</li>
+          <li class="sub">95</li>
+          <li class="sub">36</li>
+          <li class="som">19</li>
+          <li class="som">85</li>
+          <li class="sub">27</li>
+          <li class="sub">48</li>
         </ul>
       </section>
   </section>
@@ -60,6 +60,53 @@
     <button type="button" name="button">Iniciar</button>
   </section>
 <script src="js/jquery-3.4.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script>
+  $(".inic button").on("click", function(){
+    $(".inic").fadeOut();
+    $(".prin").fadeIn();
+    var temp = parseInt(3);
+    var ran = Math.floor(Math.random() * 100) + 1;
+
+    $(".prin .secdois h1").text(temp);
+    $(".prin .secum .um h1").text(ran);
+
+    // Tempo
+    // setInterval( function() {
+    //   temp = temp - 1;
+    //   $(".prin .secdois h1").text(temp);
+    //     if(temp == 0){ 
+    //         $(".prin").fadeOut();
+    //         $(".inic").fadeIn();
+    //     }
+    //   }, 1000);
+
+    $(".som").on("click", function(){
+      var ta = $(this).text();
+      var num2 = $(".dois").text();
+      if($(".dois").text() == 0){
+        $(".dois").text(ta);
+      }else{
+        var res = parseInt($(".dois").text()) + parseInt(ta);
+        $(".dois").text(res);
+      }
+    });
+     $(".sub").on("click", function(){
+      var ta = $(this).text();
+      var num2 = $(".dois").text();
+      if($(".dois").text() == 0){
+        var neg = ta * -1;
+        $(".dois").text(neg);
+      }else{
+        var res = parseInt($(".dois").text()) - parseInt(ta);
+        $(".dois").text(res);
+      }
+    });
+     // if($(".prin .secum .um h1").text() == $(".dois").text()){
+     //  $(".prin").fadeOut();
+     //  $("")
+     // }
+
+  });
+</script>
 </body>
 </html>
